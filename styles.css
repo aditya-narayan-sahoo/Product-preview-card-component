@@ -1,0 +1,163 @@
+:root {
+    --dark-blue: hsl(212, 21%, 14%);
+    --cream: hsl(30, 38%, 92%);
+    --dark-cyan: hsl(158, 36%, 37%);
+    --grayish-blue: hsl(228, 12%, 48%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+main {
+    background-color: var(--cream);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+.card {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 65rem;
+    border-radius: 10px;
+}
+
+img {
+    width: 100%;
+}
+
+.desktop-img {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.mobile-img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-content {
+    padding: 3.5rem;
+}
+
+.perfume {
+    display: inline-block;
+    color: var(--grayish-blue);
+    font-family: "Montserrat";
+    font-weight: 400;
+    font-size: 1.4rem;
+    letter-spacing: 5px;
+}
+
+.heading {
+    margin: 2.4rem 0;
+    font-size: 3.5rem;
+    line-height: 1;
+    font-family: "Fraunces";
+    color: var(--dark-blue);
+    font-weight: 700;
+}
+
+.description {
+    font-family: "Montserrat";
+    color: var(--grayish-blue);
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1.9rem;
+    background-color: var(--dark-cyan);
+    text-decoration: none;
+    font-family: "Montserrat";
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 10px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.icon {
+    width: 1.6rem;
+    height: 1.7rem;
+}
+
+.btn:hover {
+    background-color: hsl(158, 36%, 20%);
+}
+
+.price {
+    margin: 2.7rem 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.discount {
+    font-family: "Fraunces";
+    font-size: 3.4rem;
+    color: var(--dark-cyan);
+}
+
+.regular {
+    font-family: "Montserrat";
+    color: var(--grayish-blue);
+    font-size: 1.4rem;
+    text-decoration: line-through;
+}
+
+@media screen and (min-width: 701px) {
+    .mobile-img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .card {
+        grid-template-columns: 1fr;
+    }
+
+    .desktop-img {
+        display: none;
+    }
+
+    html {
+        font-size: 55%;
+    }
+
+    .heading {
+        margin: 1.8rem 0 2rem 0;
+    }
+
+    .price {
+        margin: 2.4rem 0 2rem 0;
+    }
+
+    .card-content {
+        padding: 25px;
+    }
+
+    .description {
+        font-size: 1.6rem;
+    }
+}
